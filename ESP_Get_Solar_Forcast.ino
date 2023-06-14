@@ -132,7 +132,7 @@ void setup() {
       if(bTomorrow && (nCount < 48)) {    
         //There are 48 readings in 24h - so once the first midnight is detected, get the next 48 readings 
         nCount++; 
-        dTomorrowTotal = dTomorrowTotal + dEstimate;
+        dTomorrowTotal = dTomorrowTotal + dEstimate / 2;
         Serial.print("Time: "); Serial.print(nHour); Serial.print(":");Serial.print(nMinute);
         Serial.print("  Half Hour Estimate: "); Serial.print(dEstimate);
         Serial.print("    Cumulative Total "); Serial.print(dTomorrowTotal); Serial.print("kWh"); Serial.println();
